@@ -1,0 +1,517 @@
+@charset "utf-8";
+/*初始化设置*/
+html,body{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 1260px;
+    overflow-x: auto;
+}
+a{
+    text-decoration: none;
+    font-style: none;
+    color: #555;
+}
+p{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+ul,li{
+    font-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.displayOn{
+    display: block;
+}
+.displayOff {
+	display: none;
+}
+.main{
+    width: 100%;
+    height: auto;
+}
+.dpi-1260{
+    width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.dpi-1190{
+    width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+/*header标签样式*/
+header{
+    width: auto;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+}
+/*header宽度限制*/
+.head_bg {
+	width: 1260px;
+    height: 295px;
+    z-index: 0;
+}
+/*出售链接样式*/
+.sale_tag{
+    width: 221px;
+    height: 53px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-image: url(../img/icon/sprites_0_27.png);
+    background-repeat: no-repeat;
+}
+.sale_tag:hover {
+	background-position: 0 -53px;
+}
+/*网站logo样式*/
+.logo {
+	width: 286px;
+    height: 83px;
+    position: absolute;
+    left: calc(50% - 143px);
+    top: calc(50% - 83px);
+}
+.logo a{
+    width: 100%;
+    height: 100%;
+    display: block;
+	background-image: url(../img/icon/sprites_0_02.png);
+}
+/*登陆按钮or用户名or购物车样式 通过本地存储判断登陆状态*/
+.loginOrShop {
+	width: 200px;
+    position: absolute;
+    right: 10px;
+    top: 130px;
+    text-align: right;
+}
+.login{
+	width: 105px;
+    height: 37px;
+    display: inline-block;
+    background-image: url(../img/icon/sprites_0_32.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.login:hover {
+	background-position: 0 -37px;
+}
+.userName {
+    height: 37px;
+    font: 16px/37px "微软雅黑";
+    display: inline-block;
+    vertical-align: middle;
+}
+.userName a:hover{
+    color: #c10000;
+    text-decoration:underline;
+}
+.cut_line {
+	width: 10px;
+    height: 37px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-right: 2px solid #777;
+    vertical-align: middle;
+}
+.shopCar {
+	width: 56px;
+    height: 56px;
+    display: inline-block;
+    background-image: url(../img/icon/sprites_0_58.png);
+    background-repeat: no-repeat;
+    background-position: 9px 15px;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+}
+.shopCar mark{
+    display: block;
+    width: 14px;
+    height: 14px;
+	background-color: #c10000;
+    font: 14px/14px "微软雅黑";
+    border-radius: 50%;
+    text-align: center;
+    color: aliceblue;
+    margin-left: calc(100% - 18px);
+    margin-top: 6px;
+}
+.shopCar_on {
+	width: 56px;
+    height: 56px;
+    display: inline-block;
+    background-image: url(../img/icon/sprites_0_59.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    text-decoration: none;
+    z-index: 2;
+    position: relative;
+}
+.shopCar_on mark{
+    display: block;
+    width: 14px;
+    height: 14px;
+	background-color: #c10000;
+    font: 14px/14px "微软雅黑";
+    border-radius: 50%;
+    text-align: center;
+    color: aliceblue;
+    margin-left: calc(100% - 18px);
+    margin-top: 6px;
+}
+/*购物车样式*/
+.shopCar_details {
+	width: 100%;
+    min-width: 200px;
+    height: 180px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    margin-left: -1px;
+    font: 12px/25px "宋体";
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    display: none;    
+}
+.details{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbb;
+}
+.shopCar_details p{
+	width: 100%;
+    height: 25px;
+}
+.shopCar_details p span{
+    text-align: left;
+    float: left;
+}
+.goods_name{
+    display: block;
+    width: 60%;
+    height: 100%;
+}
+.goods_name a:hover{
+    color: #146dc6;
+    text-decoration: underline;
+}
+.goods_price{
+    display: block;
+    width: 20%;
+    height: 100%;
+    color: #ffba00;
+    text-align: center;
+}
+.goods_num{
+    display: block;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+.detailsBtn {
+	width: 100%;
+    height: 40px;
+    padding-top: 10px;
+}
+.detailsBtn a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    font: 18px/40px "微软雅黑";
+}
+/*地区选择框样式*/
+.select_region {
+	width: 140px;
+    height: 36px;
+    position: absolute;
+    top: calc(50% + 20px);
+    left: calc(50% - 70px);
+    box-sizing: border-box;
+    border: 1px solid #777;
+    color: #555;
+}
+.region {
+	width: 100px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font: 18px/34px "微软雅黑";
+    float: left;
+    cursor: pointer;
+}
+.region:hover ~ i{
+	background-image: url(../img/icon/sprites_0_19.png);
+}
+.select_icon{
+    width: 38px;
+    height: 36px;
+    display: block;
+    box-sizing: border-box;
+    background-image: url(../img/icon/sprites_0_09.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+}
+.select_icon:hover{
+    background-image: url(../img/icon/sprites_0_19.png);
+}
+.regionBox {
+	width: 140px;
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #777;
+    background-color: #fdfdfd;
+    color: #555;
+    border-top: 0;
+    position: absolute;
+    top: 35px;
+    left: calc(50% - 70px);
+    font: 18px/34px "微软雅黑";
+    z-index: 2;
+    display: none;
+}
+.regionBox li:hover{
+    background-color: #77b74b;
+    color: aliceblue;
+}
+
+/*导航条样式*/
+nav{
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.98);
+    top: 220px;
+    z-index: 0;
+}
+
+nav ul li{
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    float: left;
+    text-align: center;
+    margin: 0 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid transparent;
+    position: relative;
+}
+nav ul li > a{
+    font: 18px/54px "微软雅黑";
+    display: block;
+}
+nav ul li:hover{
+    border: 1px solid #bbb;
+    border-top: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+nav ul li:hover > a{
+    color: #d8170e;
+    border-bottom: 1px solid #d8170e;
+}
+nav ul li:hover > div{
+    display: block;
+}
+nav ul li div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+nav ul li div > a{
+    display: block;
+    font: 14px/32px "微软雅黑";
+}
+nav ul li div > a:hover{
+    text-decoration: underline;
+    color: #d8170e;
+}
+.double_row a{
+    width: 50%;
+    float: left;
+}
+.double_row a:nth-of-type(odd){
+	clear: left;
+}
+.searchBox {
+	width: 160px;
+    height: 36px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.searchBox input{
+	width: 76%;
+    height: 100%;
+    border: 0;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 16px;
+    float: left;
+    outline: none;
+}
+.searchBox i{
+    display: block;
+    width: 36px;
+    height: 100%;
+    background-image: url(../img/icon/sprites_0_03.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    cursor: pointer;
+}
+.searchBox i:hover{
+	background-image: url(../img/icon/sprites_0_16.png);
+}
+.searchBox_focus {
+	box-shadow: 0 0 10px rgba(130, 195, 83, 0.6);
+}
+
+/*footer样式*/
+footer{
+    margin-top: 72px;
+    background-color: #f0f2f3;
+    
+}
+.footer_info-content .h14 {
+	line-height: 14px;
+}
+.addBorder {
+	border-right: 1px solid #bbb;
+}
+
+.footer_title {
+	width: 100%;
+    min-width: 1260px;
+    height: 72px;
+    background-color: #77b74b;
+    font: 22px/72px "微软雅黑";
+    text-align: center;
+    color: #fff;
+    cursor:default;
+}
+.footer_mark {
+	width: 100%;
+    height: 160px;
+    text-align: center;
+}
+.footer_mark-keywords {
+	width: 156px;
+    height: 140px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.footer_mark-keywords i{
+	width: 84px;
+    height: 96px;
+    display: block;
+    font: normal 24px/97px "微软雅黑";
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/icon/sprites_0_29.png);
+    background-repeat: no-repeat;
+}
+.footer_mark-keywords span{
+    width: auto;
+    font: 13px/14px "微软雅黑";
+    color: #999;
+}
+
+.footer_info {
+	width: 100%;
+    height: 140px;
+    margin-top: 36px;
+    text-align: center;
+    overflow: hidden;
+}
+.footer_info-content {
+	width: auto;
+    height: 120px;
+    margin: 0;
+    padding: 0 48px;
+    border-left: 1px solid #bbb;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer_info-content h2{
+	font: bold 16px/22px "微软雅黑";
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+.footer_info-content p{
+	display: block;
+    font: 12px "微软雅黑";
+    line-height: 20px;
+    color: #666;
+}
+.footer_info-content p span{
+    vertical-align: middle;
+}
+.sina_logo{
+	display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/icon/sprites_0_11.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.weixin_logo{
+	display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/icon/sprites_0_20.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.sina-QR {
+	width: 86px;
+    height: 86px;
+    background-image: url(../img/icon/sprites_0_36.png);
+    margin: 0 auto;
+}
+.record_info {
+	width: 720px;
+    height: 36px;
+    background-color: #77b74b;
+    color: #fff;
+    font: 16px/36px "微软雅黑";
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+/*内容部分外框布局样式*/
+article{
+    margin-bottom: 100px;
+    z-index: 0;
+}

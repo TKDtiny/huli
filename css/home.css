@@ -1,0 +1,52 @@
+@charset "utf-8";
+.home_h1 {
+    width: 431px;
+    height: 35px;
+    background-image: url(../img/icon/sprites_0_01.png);
+    display: block;
+    margin: 0 auto;
+}
+section{
+    margin: 0;
+    padding: 0;
+}
+.img_list {
+    margin-top: 40px;
+    overflow: hidden; 
+}
+.carousel {
+	width: 814px;
+    height: 388px;
+    position: relative;
+    margin: 0;
+}
+.carousel img{
+	position: absolute;
+    transition:all 1.5s ease;
+}
+.img_38{
+    width: 388px;
+    height: 388px;
+}
+.img_fl{
+    float: left;
+}
+.img_fr{
+    float: right;
+}
+
+.img_line {
+	width: 388px;
+    height: 814px;
+}
+.img_mt38{
+    margin-top: 38px;
+}
+.img_ml48{
+    margin-left: 48px;
+}
+iframe{
+	width: 388px;
+    height: 388px;
+    position: relative;
+}

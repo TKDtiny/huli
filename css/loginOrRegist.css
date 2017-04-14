@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+.login_h1 {
+	width: 431px;
+    height: 35px;
+    display: block;
+    margin: 0 auto;
+    font: 32px/35px "微软雅黑";
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+.art_head {
+	width: 431px;
+    height: 35px;
+    display: block;
+    margin: 0 auto;
+    font: 18px/35px "微软雅黑";
+    text-align: center;
+    margin-bottom: 10px;
+    color: #888;
+}
+.art_head a{
+	text-decoration:underline;
+    color: #546d9b;
+}
+section{
+    width: 431px;
+    height: auto;
+    margin: 60px auto;
+}
+section form{
+    margin: 0;
+    padding: 0;
+    
+}
+section form label{
+    display: block;
+    width: 100%;
+    font: 18px "微软雅黑";
+    line-height: 200%;
+}
+section form input{
+    width: 100%;
+    box-sizing: border-box;
+    font: 16px "微软雅黑";
+    line-height: 300%;
+    padding-left: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    border:1px solid #bbb; 
+}
+section form p{
+    text-align: right;   
+}
+section form p a{
+    font: 18px/20px "微软雅黑";
+    color: black;
+    text-decoration: underline;
+}
+.loginBtn {
+	width: 100%;
+    font: 24px "微软雅黑";
+    line-height: 300%;
+    outline: none;
+    margin-top: 30px;
+    border: 0;
+    color: aliceblue;
+    transition: all 0.3s ease;
+    background-color: #77b74b;
+    cursor: pointer;
+}
+.loginBtn:disabled {
+	cursor: not-allowed;
+    background-color: #838281;
+}
+.registBtn {
+	width: 100%;
+    font: 24px "微软雅黑";
+    line-height: 300%;
+    outline: none;
+    margin-top: 30px;
+    border: 0;
+    color: aliceblue;
+    transition: all 0.3s ease;
+    background-color: #77b74b;
+    cursor: pointer;
+}
+.registBtn:disabled {
+	cursor: not-allowed;
+    background-color: #838281;
+}
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    display: none;
+}
+.popBox {
+    width: 460px;
+    height: 260px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-top: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(136, 133, 133, 0.8);
+}
+.pop_head {
+	width: 100%;
+    height: 48px;
+}
+.pop_content {
+	width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.pop_text {
+	font: 20px/36px "微软雅黑";
+}
+.pop_footer {
+	width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.pop_Btn {
+	width: 120px;
+    font: 18px "微软雅黑";
+    line-height: 300%;
+    outline: none;
+    margin-top: 30px;
+    border: 0;
+    color: #fff;
+    transition: all 0.3s ease;
+    background-color: #838281;
+    cursor: pointer;
+}
+.pop_Btn:hover {
+    background-color: #77b74b;
+}
